@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trockenbau Egin</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {font-family:'Inter', sans-serif; background:#f9f9f9; color:#333; line-height:1.7; scroll-behavior:smooth;}
+    
+    header {
+      display:flex; 
+      justify-content:space-between; 
+      align-items:center; 
+      padding:20px 60px; 
+      background:rgba(255,255,255,0.95); 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position:sticky; top:0; z-index:1000;
+    }
+    header h1 {font-family:'Orbitron', sans-serif; color:#1d4ed8; font-size:28px; letter-spacing:1px;}
+    nav a {
+      color:#555; 
+      margin-left:30px; 
+      text-decoration:none; 
+      font-weight:500; 
+      transition:0.3s; 
+      position:relative;
+    }
+    nav a::after {
+      content:''; 
+      display:block; 
+      height:2px; 
+      width:0; 
+      background:#1d4ed8; 
+      transition:width 0.3s; 
+      position:absolute; 
+      bottom:-4px; 
+      left:0;
+    }
+    nav a:hover::after {width:100%;}
+
+    .hero {
+      height:90vh; 
+      display:flex; 
+      flex-direction:column; 
+      justify-content:center; 
+      align-items:center; 
+      background:#e0f2fe; 
+      text-align:center; 
+      padding:0 20px;
+      animation:fadeIn 1.5s ease-in;
+    }
+    .hero h2 {font-size:48px; font-family:'Orbitron', sans-serif; margin-bottom:20px; color:#1d4ed8;}
+    .hero span {color:#2563eb;}
+    .hero p {max-width:650px; margin-bottom:30px; font-size:18px; color:#333;}
+    .btn {
+      padding:14px 32px; 
+      border:1px solid #2563eb; 
+      color:#2563eb; 
+      text-decoration:none; 
+      border-radius:10px; 
+      font-weight:500; 
+      transition:all 0.3s ease;
+    }
+    .btn:hover {
+      background:#2563eb; 
+      color:#fff; 
+      box-shadow:0 0 20px rgba(37,99,235,0.5); 
+      transform:translateY(-3px);
+    }
+
+    section {padding:100px 40px; max-width:1200px; margin:auto;}
+    h2 {font-family:'Orbitron', sans-serif; margin-bottom:25px; font-size:32px; color:#1d4ed8; position:relative;}
+    h2::after {content:''; display:block; width:60px; height:3px; background:#2563eb; margin-top:10px; border-radius:2px;}
+    
+    .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px; margin-top:35px;}
+    .card {
+      background:#fff; 
+      padding:30px; 
+      border-radius:15px; 
+      border:1px solid rgba(37,99,235,0.2); 
+      transition:all 0.3s ease; 
+      cursor:pointer;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+    .card:hover {transform:translateY(-8px) scale(1.02); box-shadow:0 5px 20px rgba(37,99,235,0.2);}
+    .card h3 {margin-bottom:15px; color:#1d4ed8; font-size:22px;}
+    .card p {color:#555; font-size:16px;}
+
+    footer {text-align:center; padding:40px 20px; border-top:1px solid #ddd; font-size:15px; color:#555;}
+
+    @keyframes fadeIn {from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);}}
+    @media (max-width:768px){header{flex-direction:column; gap:15px; padding:15px 30px;} .hero h2{font-size:36px;} .hero p{font-size:16px;}}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Trockenbau Egin</h1>
+  <nav>
+    <a href="#about">Über uns</a>
+    <a href="#services">Leistungen</a>
+    <a href="#contact">Kontakt</a>
+    <a href="#impressum">Impressum</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>Willkommen bei <span>Trockenbau Egin</span></h2>
+  <p>Ihr zuverlässiger Partner für Trockenbau, Innenausbau und Renovierungen. Qualität, Präzision und saubere Arbeit sind unser Markenzeichen.</p>
+  <a href="#contact" class="btn">Jetzt Kontakt aufnehmen</a>
+</div>
+
+<section id="about">
+  <h2>Über uns</h2>
+  <p>
+    Trockenbau Egin ist ein erfahrenes Team im Bereich Innenausbau und Renovierung. Wir realisieren Projekte für Privat- und Geschäftskunden – von einfachen Deckenlösungen bis zu komplexen Raumgestaltungen.  
+    Unser Ziel: Ihre Räume modern, funktional und hochwertig zu gestalten.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Unsere Leistungen</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Trockenbau</h3>
+      <p>Fachgerechte Wände, Decken und Raumaufteilungen nach Ihren Wünschen.</p>
+    </div>
+    <div class="card">
+      <h3>Innenausbau</h3>
+      <p>Individuelle Raumlösungen, Einbauten und Deckengestaltungen für Ihr Zuhause oder Büro.</p>
+    </div>
+    <div class="card">
+      <h3>Renovierungen</h3>
+      <p>Saubere und effiziente Renovierung Ihrer Räume mit Liebe zum Detail.</p>
+    </div>
+    <div class="card">
+      <h3>Beratung & Planung</h3>
+      <p>Professionelle Beratung und Planung für eine stressfreie Umsetzung Ihrer Projekte.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Kontakt</h2>
+  <p>Email: <a href="mailto:info@trockenbau.at">info@trockenbau.at</a></p>
+  <p>Telefon: <a href="tel:+431234567890">+43 123 4567890</a></p>
+</section>
+
+<section id="impressum">
+  <h2>Impressum</h2>
+  <p><strong>Trockenbau Egin</strong><br>
+     Cengiz Egin<br>
+     Musterstraße 12<br>
+     12345 Musterstadt<br>
+     Österreich</p>
+  <p><strong>Kontakt:</strong><br>
+     Telefon: +43 123 4567890<br>
+     Email: <a href="mailto:info@trockenbau.at">info@trockenbau.at</a></p>
+  <p><strong>Umsatzsteuer-ID:</strong> AT123456789</p>
+  <p><strong>Verantwortlich für den Inhalt:</strong><br>
+     Cengiz Egin</p>
+</section>
+
+<footer>
+  <p>© 2026 Trockenbau Egin | Qualität • Präzision • Saubere Arbeit</p>
+</footer>
+
+</body>
+</html>
