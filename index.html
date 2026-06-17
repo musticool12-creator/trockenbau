@@ -27,21 +27,24 @@ header{
 }
 
 .logo{
-  width:180px;
+  width:100%;
+  max-width:325px;
+  height:auto;
   border-radius:10px;
   margin-bottom:20px;
   box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
 
+
 header h1{
-  font-size:42px;
+  font-size:50px;
   margin-bottom:10px;
-  color:#111;
+  color:#000000;
 }
 
 header p{
-  color:#666;
-  font-size:18px;
+  color:#444;
+  font-size:30px;
 }
 
 /* HERO */
@@ -69,7 +72,7 @@ header p{
 
 .hero h2{
   font-size:48px;
-  color:#111;
+  color:#000000;
 }
 
 .hero p{
@@ -169,6 +172,45 @@ header p{
   transition:0.3s;
 }
 
+/* ÜBER MICH */
+.about{
+  padding:80px 20px;
+  background:#fafafa;
+}
+
+.about-container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.about img{
+  width:320px;
+  height:320px;
+  object-fit:cover;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.about-text{
+  flex:1;
+}
+
+.about-text h3{
+  font-size:36px;
+  margin-bottom:20px;
+  color:#000;
+}
+
+.about-text p{
+  font-size:18px;
+  line-height:1.8;
+  color:#555;
+}
+
 .whatsapp:hover{
   transform:scale(1.1);
 }
@@ -191,24 +233,42 @@ footer{
 
   <!-- LOGO -->
   <img class="logo"
-    src="https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/355476800_608372994719041_8257923263859646584_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=GzbvR8LpvwcQ7kNvwEFh06M&_nc_oc=AdpPiyVxGMPTZQd7YoJ8_-2yzCxDq-i3tFEbdXASnfy9OCSQjac-48B1rtagsMZ-QnY&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=c-sMYGpqyjdJPfd2919Vtw&_nc_ss=7a289&oh=00_Af7qPtpYwRsbOxN2xM8li5KGaCZv-QcCinJGztmVIWvT7A&oe=6A0BADB7"
+    src="https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/355476800_608372994719041_8257923263859646584_n.jpg?stp=dst-jpg_tt6&cstp=mx325x325&ctp=s325x325&_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=lT_JnZFbKNQQ7kNvwFyY_xa&_nc_oc=Ado4B2pAcyFZ1V_xxFd22Q6nIUUEvTWn4nmKveOtwq69itEtRdxFbD2EH0_4KsQT15s&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=7HNw1krLFVqzmoZrlTu0jg&_nc_ss=7b289&oh=00_Af_OwhQsJ5GyDWmYWV0zzi-7pm9oeAOFC2miYl61uR9dAA&oe=6A38B8F7"
     alt="Trockenbau egin Logo"
   />
 
-  <h1>Trockenbau egin</h1>
-  <p>Innenausbau • Decken • Wände • Renovierungen</p>
+  <h1>Unsere Leistungen</h1>
+  <p>• Gipskartonständerwände • Akustikdecken • Dachgeschoßausbauten • Renovierungen • Stuckarbeiten • Brandschutzverkleidungen • Innenausbauten 
+    • Spachtelarbeiten • Beton Optik • Stucco Veneziano/Naturale •</p>
 
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h2>Qualität im Trockenbau</h2>
-    <p>Sauber • Präzise • Zuverlässig</p>
 
-    <button class="btn"
-      onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">
-      Kontakt aufnehmen
-    </button>
+
+<section class="about">
+  <div class="about-container">
+
+    <img src="Über_mich.jpeg" alt="Cengiz Egin">
+
+    <div class="about-text">
+      <h3>Über mich</h3>
+
+      <p>
+        Mein Name ist Mehmet Egin und ich bin seit vielen Jahren
+        im Bereich Trockenbau und Innenausbau tätig.
+        Mit Erfahrung, Präzision und Leidenschaft setze ich Projekte
+        für Privat- und Geschäftskunden um.
+      </p>
+
+      <p>
+        Qualität, Zuverlässigkeit und saubere Arbeit stehen bei mir
+        an erster Stelle. Von kleinen Renovierungen bis hin zu
+        kompletten Innenausbauten begleite ich meine Kunden von der
+        Planung bis zur fertigen Umsetzung.
+      </p>
+
+    </div>
+
   </div>
 </section>
 
@@ -221,9 +281,21 @@ footer{
   </p>
 
   <div class="gallery">
-    <img src="https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/480748100_976732827883054_6656264989825634320_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=qfF10JQq13IQ7kNvwGg-6xj&_nc_oc=Adq7yVamtb6YWdgl3LZV41SWTjYiEroXuAAtxF25JFGzDauaxYv9i3ByptWYAhgQzBY&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=Cw-lKVbljHndmXFyIztP7Q&_nc_ss=7b289&oh=00_Af6bIeEzcNUnUy6sPmfpN1C367pbtm6WL4dIs6JQzy6Xfw&oe=6A0BB022">
-    <img src="https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/494743160_1030662852490051_1721021566262778045_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=JSU_0043wQgQ7kNvwHDh2pR&_nc_oc=Adri9vom3GWp_2UJZE1eQujeGXgSNtHpft5ASZVNZNfRf1Xb-Xj5sI_YIPfFr2Uv14w&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=fzBI38bgcWIRXBghU9zFrA&_nc_ss=7b289&oh=00_Af4dFD_4tFflT-ceDCh9CeXxWxWCUIDNTbjd7AlJ1g7GRw&oe=6A0B9511">
-    <img src="https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/481053725_979610047595332_2919140808733769872_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=jz72lYMymJwQ7kNvwG0F0Au&_nc_oc=Ado5Cw6Bfubu2F25jEkFmdQKMmLWw6j8IBwoFXS_hZJE_rr3RywhkBlQVcvAAJsvnzQ&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=TDTeB3BayIyDIHsf6g3h_g&_nc_ss=7b289&oh=00_Af6Cqz-fOC_iFnFwh7Ik3ssC4nLeFDPPRBCPMw54IZ76Cg&oe=6A0B8C70">
+    <img src="https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/473336524_909161337953969_8386513321205452719_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=p526x296&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=sXo969L256oQ7kNvwFk51eS&_nc_oc=Adr-1PDwd34DBAtFVbtOHw-E9bNroq0Ap2G2YtvjFjkj-lVB1oTQxYlluYW67mhbSIA&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=KfOWc-eDYvASbRkAC5E2GA&_nc_ss=7b289&oh=00_Af8S-mXI7bu3-kBvMysSwtA7rLd8L2TR7C0MLxyIKbVITQ&oe=6A38B343">
+    <img src="https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/473546356_908627948007308_6203440519065140327_n.jpg?stp=dst-jpg_tt6&cstp=mx1152x2048&ctp=s1152x2048&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=sAZ9Fc7872oQ7kNvwHQnR61&_nc_oc=AdpWfgLM7F9MldXTCXyXWifPnHnfc6rvcWkfMuL6buz8J1UA-2yi5gv2JUEwZ-t_IKs&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=hGTUiG4yWudIYNLcy5KqaQ&_nc_ss=7b289&oh=00_Af-a6nEC0x3kvMvyN9O4LjCeEH2zG38YAGil9KlAvoRqCw&oe=6A38BC73">
+    <img src="https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/480728823_975852957971041_5509249998745799009_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8lSrLuWdQpkQ7kNvwGtWOCT&_nc_oc=AdpKX33Bg4bU5xUDPtdmnqlup-IzHoWnAYU1lzMQwNwV1n373WBAQsLeUQ3XK2l7Y4w&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=CGrmMraI9k07eBDc8PtYvA&_nc_ss=7b289&oh=00_Af9H9wdx63FwoQ1AhOJ3V1Cu3HUCZGaNxPEWdT6dxI-UAQ&oe=6A38CA4E">
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Qualität im Trockenbau</h2>
+    <p>Sauber • Präzise • Zuverlässig</p>
+
+    <button class="btn"
+      onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">
+      Kontakt aufnehmen
+    </button>
   </div>
 </section>
 
