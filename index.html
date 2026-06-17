@@ -206,11 +206,18 @@ header p{
 
 .about-image img{
   width:100%;
-  max-width:400px;
-  height:400px;
+  max-width:450px;
+  height:auto;
+  aspect-ratio:1/1;
   object-fit:cover;
   border-radius:15px;
   box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width:768px){
+  .about-image img{
+    max-width:300px;
+  }
 }
 
 .about-text{
