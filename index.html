@@ -1,318 +1,39 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Trockenbau egin</title>
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
-}
-
-body{
-  background:#ffffff;
-  color:#222;
-}
-
-/* HEADER */
-header{
-  text-align:center;
-  padding:50px 20px 30px;
-  background:#ffffff;
-  border-bottom:1px solid #eee;
-}
-
-.logo{
-  width:100%;
-  max-width:325px;
-  height:auto;
-  border-radius:10px;
-  margin-bottom:20px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
-}
-
-
-header h1{
-  font-size:50px;
-  margin-bottom:10px;
-  color:#000000;
-}
-
-header p{
-  color:#444;
-  font-size:30px;
-}
-
-/* HERO */
-.hero{
-  height:450px;
-  background:url('https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/473336524_909161337953969_8386513321205452719_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Eg9zFs7RFokQ7kNvwE_NVoc&_nc_oc=AdqmpB7XCIHNCW_s-hnnkiF1Z5CWilcy4U6ifIbeBwidhZj3cCZJhZz_puD23Y0UCW4&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=oMYUn54-QG3ZAQUjgYQO5A&_nc_ss=7b289&oh=00_Af53w_9Za2EsQHZzFyzxxPifvaYeMc31U6qEKcArYubLiQ&oe=6A0BA803') center/cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  text-align:center;
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(255,255,255,0.65);
-}
-
-.hero-content{
-  position:relative;
-  z-index:1;
-}
-
-.hero h2{
-  font-size:48px;
-  color:#000000;
-}
-
-.hero p{
-  font-size:18px;
-  color:#444;
-  margin-top:10px;
-}
-
-/* BUTTON */
-.btn{
-  margin-top:20px;
-  padding:12px 25px;
-  background:#111;
-  color:#fff;
-  border:none;
-  border-radius:30px;
-  cursor:pointer;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.btn:hover{
-  background:#333;
-  transform:scale(1.05);
-}
-
-/* SECTION */
-.section{
-  padding:80px 20px;
-  text-align:center;
-  background:#fff;
-}
-
-.section h3{
-  font-size:34px;
-  margin-bottom:20px;
-}
-
-.section p{
-  max-width:850px;
-  margin:auto;
-  line-height:1.7;
-  font-size:18px;
-  color:#555;
-}
-
-/* GALLERY */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  margin-top:40px;
-}
-
-.gallery img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  border-radius:12px;
-  border:1px solid #eee;
-  transition:0.3s;
-}
-
-.gallery img:hover{
-  transform:scale(1.03);
-}
-
-/* CONTACT */
-.contact{
-  background:#fafafa;
-  text-align:center;
-  padding:60px 20px;
-  border-top:1px solid #eee;
-}
-
-.contact p{
-  margin:8px 0;
-  color:#444;
-}
-
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  width:60px;
-  height:60px;
-  background:#25D366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:28px;
-  color:white;
-  text-decoration:none;
-  box-shadow:0 10px 20px rgba(0,0,0,0.2);
-  transition:0.3s;
-}
-
-/* ÜBER MICH */
-.about{
-  padding:80px 20px;
-  background:#fafafa;
-}
-
-.about-container{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  gap:50px;
-  flex-wrap:wrap;
-}
-
-.about img{
-  width:320px;
-  height:320px;
-  object-fit:cover;
-  border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
-}
-
-.about-text{
-  flex:1;
-}
-
-.about-text h3{
-  font-size:36px;
-  margin-bottom:20px;
-  color:#000;
-}
-
-.about-text p{
-  font-size:18px;
-  line-height:1.8;
-  color:#555;
-}
-
-.whatsapp:hover{
-  transform:scale(1.1);
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  font-size:14px;
-  color:#777;
-  background:#fff;
-  border-top:1px solid #eee;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-
-  <!-- LOGO -->
-  <img class="logo"
-    src="https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/355476800_608372994719041_8257923263859646584_n.jpg?stp=dst-jpg_tt6&cstp=mx325x325&ctp=s325x325&_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=lT_JnZFbKNQQ7kNvwFyY_xa&_nc_oc=Ado4B2pAcyFZ1V_xxFd22Q6nIUUEvTWn4nmKveOtwq69itEtRdxFbD2EH0_4KsQT15s&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=7HNw1krLFVqzmoZrlTu0jg&_nc_ss=7b289&oh=00_Af_OwhQsJ5GyDWmYWV0zzi-7pm9oeAOFC2miYl61uR9dAA&oe=6A38B8F7"
-    alt="Trockenbau egin Logo"
-  />
-
-  <h1>Unsere Leistungen</h1>
-  <p>• Gipskartonständerwände • Akustikdecken • Dachgeschoßausbauten • Renovierungen • Stuckarbeiten • Brandschutzverkleidungen • Innenausbauten 
-    • Spachtelarbeiten • Beton Optik • Stucco Veneziano/Naturale •</p>
-
-</header>
-
-
-
 <section class="about">
+
   <div class="about-container">
 
-    <img src="Über_mich.jpeg" alt="Cengiz Egin">
+    <div class="about-image">
+      <img src="bilder/profilbild.jpg" alt="Cengiz Egin">
+    </div>
 
     <div class="about-text">
+
       <h3>Über mich</h3>
 
+      <h4>Qualität, Erfahrung & Zuverlässigkeit</h4>
+
       <p>
-        Mein Name ist Mehmet Egin und ich bin seit vielen Jahren
-        im Bereich Trockenbau und Innenausbau tätig.
-        Mit Erfahrung, Präzision und Leidenschaft setze ich Projekte
-        für Privat- und Geschäftskunden um.
+        Mein Name ist <strong>Cengiz Egin</strong>. Seit über
+        <strong>16 Jahren</strong> bin ich im Trockenbau und Innenausbau tätig
+        und führe mein Unternehmen seit <strong>2020</strong> erfolgreich
+        selbstständig.
       </p>
 
       <p>
-        Qualität, Zuverlässigkeit und saubere Arbeit stehen bei mir
-        an erster Stelle. Von kleinen Renovierungen bis hin zu
-        kompletten Innenausbauten begleite ich meine Kunden von der
-        Planung bis zur fertigen Umsetzung.
+        Von Salzburg bis in die Steiermark realisiere ich Projekte für
+        Privatkunden und Unternehmen – stets mit höchster Sorgfalt,
+        Präzision und Termintreue.
       </p>
+
+      <div class="about-features">
+        <p>✔️ Über 16 Jahre Erfahrung</p>
+        <p>✔️ Saubere und fachgerechte Ausführung</p>
+        <p>✔️ Zuverlässig und termintreu</p>
+        <p>✔️ Persönliche Beratung</p>
+      </div>
 
     </div>
 
   </div>
+
 </section>
-
-<section class="section">
-  <h3>Unsere Leistungen</h3>
-
-  <p>
-    Wir bieten professionelle Trockenbauarbeiten für Neubau, Umbau und Sanierung.
-    Saubere Arbeit, termingerechte Umsetzung und höchste Qualität stehen bei uns im Mittelpunkt.
-  </p>
-
-  <div class="gallery">
-    <img src="https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/473336524_909161337953969_8386513321205452719_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=p526x296&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=sXo969L256oQ7kNvwFk51eS&_nc_oc=Adr-1PDwd34DBAtFVbtOHw-E9bNroq0Ap2G2YtvjFjkj-lVB1oTQxYlluYW67mhbSIA&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=KfOWc-eDYvASbRkAC5E2GA&_nc_ss=7b289&oh=00_Af8S-mXI7bu3-kBvMysSwtA7rLd8L2TR7C0MLxyIKbVITQ&oe=6A38B343">
-    <img src="https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/473546356_908627948007308_6203440519065140327_n.jpg?stp=dst-jpg_tt6&cstp=mx1152x2048&ctp=s1152x2048&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=sAZ9Fc7872oQ7kNvwHQnR61&_nc_oc=AdpWfgLM7F9MldXTCXyXWifPnHnfc6rvcWkfMuL6buz8J1UA-2yi5gv2JUEwZ-t_IKs&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=hGTUiG4yWudIYNLcy5KqaQ&_nc_ss=7b289&oh=00_Af-a6nEC0x3kvMvyN9O4LjCeEH2zG38YAGil9KlAvoRqCw&oe=6A38BC73">
-    <img src="https://scontent.fszg1-1.fna.fbcdn.net/v/t39.30808-6/480728823_975852957971041_5509249998745799009_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8lSrLuWdQpkQ7kNvwGtWOCT&_nc_oc=AdpKX33Bg4bU5xUDPtdmnqlup-IzHoWnAYU1lzMQwNwV1n373WBAQsLeUQ3XK2l7Y4w&_nc_zt=23&_nc_ht=scontent.fszg1-1.fna&_nc_gid=CGrmMraI9k07eBDc8PtYvA&_nc_ss=7b289&oh=00_Af9H9wdx63FwoQ1AhOJ3V1Cu3HUCZGaNxPEWdT6dxI-UAQ&oe=6A38CA4E">
-  </div>
-</section>
-
-<section class="hero">
-  <div class="hero-content">
-    <h2>Qualität im Trockenbau</h2>
-    <p>Sauber • Präzise • Zuverlässig</p>
-
-    <button class="btn"
-      onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">
-      Kontakt aufnehmen
-    </button>
-  </div>
-</section>
-
-<section class="contact" id="kontakt">
-  <h3>Kontakt</h3>
-  <p>📞 +43 660 1234567</p>
-  <p>📧 info@trockenbau-egin.at</p>
-  <p>📍 Salzburg, Österreich</p>
-</section>
-
-<a class="whatsapp" href="https://wa.me/436601234567" target="_blank">
-  💬
-</a>
-
-<footer>
-  © 2026 Trockenbau egin – Alle Rechte vorbehalten.
-</footer>
-
-</body>
-</html>
